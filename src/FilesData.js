@@ -2,81 +2,81 @@ const files = [
     {
       fileName: "App.js",
       description: "This is the main entry point of the React application.",
-      code: `
-  import React from "react";
-  import FileViewer from "./FileViewer";
-  import files from "./FilesData";
-  
-  const App = () => {
-    return (
-      <div>
-        <h1>Code Files Viewer</h1>
-        <FileViewer files={files} />
-      </div>
-    );
-  };
-  
-  export default App;
-      `,
+      code: [
+        { text: 'import React from "react";', highlight: true },
+        { text: 'import FileViewer from "./FileViewer";', highlight: false },
+        { text: 'import files from "./FilesData";', highlight: false },
+        { text: "", highlight: false },
+        { text: "const App = () => {", highlight: false },
+        { text: "  return (", highlight: false },
+        { text: '    <div>', highlight: false },
+        { text: '      <h1>Code Files Viewer</h1>', highlight: true },
+        { text: "      <FileViewer files={files} />", highlight: true, link: "/docs/FileViewer" },
+        { text: "    </div>", highlight: false },
+        { text: "  );", highlight: false },
+        { text: "};", highlight: false },
+        { text: "", highlight: false },
+        { text: "export default App;", highlight: true },
+      ],
     },
     {
       fileName: "FileViewer.js",
       description: "This component renders the list of files with links to their details.",
-      code: `
-  import React from "react";
-  import { Link } from "react-router-dom";
-  
-  const FileViewer = ({ files }) => {
-    return (
-      <div>
-        <h1>Code Files</h1>
-        <ul>
-          {files.map((file, index) => (
-            <li key={index}>
-              <Link to={\`/file/\${file.fileName}\`}>
-                {file.fileName}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    );
-  };
-  
-  export default FileViewer;
-      `,
+      code: [
+        { text: 'import React from "react";', highlight: false },
+        { text: 'import { Link } from "react-router-dom";', highlight: true },
+        { text: "", highlight: false },
+        { text: "const FileViewer = ({ files }) => {", highlight: false },
+        { text: "  return (", highlight: false },
+        { text: "    <div>", highlight: false },
+        { text: "      <h1>Code Files</h1>", highlight: true },
+        { text: "      <ul>", highlight: false },
+        { text: "        {files.map((file, index) => (", highlight: false },
+        { text: "          <li key={index}>", highlight: false },
+        { text: "            <Link to={`/file/${file.fileName}`}>", highlight: true, link: "/docs/fileName" },
+        { text: "              {file.fileName}", highlight: true },
+        { text: "            </Link>", highlight: false },
+        { text: "          </li>", highlight: false },
+        { text: "        ))}", highlight: false },
+        { text: "      </ul>", highlight: false },
+        { text: "    </div>", highlight: false },
+        { text: "  );", highlight: false },
+        { text: "};", highlight: false },
+        { text: "", highlight: false },
+        { text: "export default FileViewer;", highlight: false },
+      ],
     },
     {
       fileName: "FileDetail.js",
       description: "This component shows the detailed code and description of a file.",
-      code: `
-  import React from "react";
-  import { useParams, Link } from "react-router-dom";
-  import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-  import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
-  
-  const FileDetail = ({ files }) => {
-    const { fileName } = useParams();
-    const file = files.find((f) => f.fileName === fileName);
-  
-    if (!file) {
-      return <div>File not found</div>;
-    }
-  
-    return (
-      <div>
-        <h2>{file.fileName}</h2>
-        <p>{file.description}</p> {/* 설명 출력 */}
-        <SyntaxHighlighter language="javascript" style={docco}>
-          {file.code}
-        </SyntaxHighlighter>
-        <Link to="/">Back to file list</Link>
-      </div>
-    );
-  };
-  
-  export default FileDetail;
-      `,
+      code: [
+        { text: 'import React from "react";', highlight: false },
+        { text: 'import { useParams, Link } from "react-router-dom";', highlight: true },
+        { text: 'import { Light as SyntaxHighlighter } from "react-syntax-highlighter";', highlight: false },
+        { text: 'import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";', highlight: false },
+        { text: "", highlight: false },
+        { text: "const FileDetail = ({ files }) => {", highlight: false },
+        { text: "  const { fileName } = useParams();", highlight: true },
+        { text: "  const file = files.find((f) => f.fileName === fileName);", highlight: true },
+        { text: "", highlight: false },
+        { text: "  if (!file) {", highlight: false },
+        { text: '    return <div>File not found</div>;', highlight: false },
+        { text: "  }", highlight: false },
+        { text: "", highlight: false },
+        { text: "  return (", highlight: false },
+        { text: "    <div>", highlight: false },
+        { text: "      <h2>{file.fileName}</h2>", highlight: false },
+        { text: "      <p>{file.description}</p>", highlight: false },
+        { text: "      <SyntaxHighlighter language='javascript' style={docco}>", highlight: false },
+        { text: "        {file.code}", highlight: true },
+        { text: "      </SyntaxHighlighter>", highlight: false },
+        { text: "      <Link to='/'>Back to file list</Link>", highlight: false },
+        { text: "    </div>", highlight: false },
+        { text: "  );", highlight: false },
+        { text: "};", highlight: false },
+        { text: "", highlight: false },
+        { text: "export default FileDetail;", highlight: false },
+      ],
     },
   ];
   
