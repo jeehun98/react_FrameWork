@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FileViewer from "./FileViewer";
 import FileDetail from "./FileDetail";
 import DocsPage from "./DocsPage"; // 새 문서 페이지
-import files from "./FilesData";
+import files from "./data";
 
 const App = () => {
   return (

@@ -7,11 +7,8 @@ const FileViewer = ({ files }) => {
       <h1>Code Files</h1>
       <ul>
         {files.map((file, index) => (
-          <li key={index} style={{ marginBottom: "16px" }}>
-            <Link to={`/file/${file.fileName}`} style={{ fontWeight: "bold" }}>
-              {file.fileName}
-            </Link>
-            <p style={{ margin: "4px 0", color: "#555" }}>{file.description}</p> {/* 간략 설명 추가 */}
+          <li key={index}>
+            <Link to={`/file/${file.fileName}`}>{file.fileName}</Link>
           </li>
         ))}
       </ul>
