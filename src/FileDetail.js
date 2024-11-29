@@ -4,7 +4,7 @@ import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 const FileDetail = ({ files }) => {
-  const { fileName } = useParams(); // URL에서 파일 이름 가져오기
+  const { fileName } = useParams();
   const file = files.find((f) => f.fileName === fileName);
 
   if (!file) {
@@ -14,6 +14,7 @@ const FileDetail = ({ files }) => {
   return (
     <div>
       <h2>{file.fileName}</h2>
+      <p style={{ fontStyle: "italic", color: "#555" }}>{file.description}</p> {/* 설명 추가 */}
       <SyntaxHighlighter language="javascript" style={docco}>
         {file.code}
       </SyntaxHighlighter>

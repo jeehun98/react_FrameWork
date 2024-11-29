@@ -7,11 +7,11 @@ const FileViewer = ({ files }) => {
       <h1>Code Files</h1>
       <ul>
         {files.map((file, index) => (
-          <li key={index}>
-            {/* 파일 이름 클릭 시 상세 페이지로 이동 */}
-            <Link to={`/file/${encodeURIComponent(file.fileName)}`}>
+          <li key={index} style={{ marginBottom: "16px" }}>
+            <Link to={`/file/${file.fileName}`} style={{ fontWeight: "bold" }}>
               {file.fileName}
             </Link>
+            <p style={{ margin: "4px 0", color: "#555" }}>{file.description}</p> {/* 간략 설명 추가 */}
           </li>
         ))}
       </ul>
