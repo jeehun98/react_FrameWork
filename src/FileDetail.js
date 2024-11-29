@@ -29,15 +29,15 @@ const FileDetail = ({ files }) => {
             }}
           >
             {line.link ? (
-              <a
-                href={line.link}
+              <Link
+                to={line.link}
                 style={{
                   color: "blue",
                   textDecoration: "underline",
                 }}
               >
                 {line.text}
-              </a>
+              </Link>
             ) : (
               line.text
             )}
