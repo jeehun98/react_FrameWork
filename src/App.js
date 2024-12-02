@@ -11,7 +11,7 @@ const App = () => {
     <div className="App">
       <Router>
         <header>
-          <h1>Code Files Viewer</h1>
+          <h1>AI Framework 주요 기능 구현</h1>
         </header>
         <Routes>
           <Route path="/" element={<FileViewer files={files} />} />

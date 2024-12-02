@@ -5,7 +5,7 @@ import "./styles/FileViewer.css";
 const FileViewer = ({ files }) => {
   return (
     <div className="FileViewer">
-      <h2>Available Files</h2>
+      <h2>각 주요 기능 설명</h2>
       <ul>
         {files.map((file, index) => (
           <li key={index}>
