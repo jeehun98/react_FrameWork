@@ -1,6 +1,6 @@
 const AppData = {
     fileName: "App.js",
-    description: "This is the main entry point of the React application.",
+    description: "This is the main entry point of the React application.??",
     code: [
       { text: 'import React from "react";', highlight: true },
       { text: 'import FileViewer from "./FileViewer";', highlight: false },

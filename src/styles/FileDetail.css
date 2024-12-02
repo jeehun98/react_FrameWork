@@ -1,0 +1,31 @@
+/* styles/FileDetail.css */
+.FileDetail {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .FileDetail h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .FileDetail pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+  
+  .FileDetail a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .FileDetail a:hover {
+    text-decoration: underline;
+  }
+  

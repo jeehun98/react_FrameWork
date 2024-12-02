@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./styles/FileViewer.css";
 
 const FileViewer = ({ files }) => {
   return (
-    <div>
-      <h1>Code Files</h1>
+    <div className="FileViewer">
+      <h2>Available Files</h2>
       <ul>
         {files.map((file, index) => (
           <li key={index}>

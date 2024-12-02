@@ -1,0 +1,42 @@
+/* styles/FileViewer.css */
+.FileViewer {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .FileViewer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .FileViewer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .FileViewer li {
+    display: flex;
+    align-items: center; /* 아이콘과 텍스트 정렬 */
+    margin: 10px 0;
+  }
+  
+  .FileViewer a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .FileViewer a:hover {
+    text-decoration: underline;
+  }
+  
+  .file-icon {
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-right: 8px; /* 아이콘과 텍스트 간격 */
+  }
+  

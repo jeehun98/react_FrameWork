@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import "./styles/FileDetail.css";
 
 const FileDetail = ({ files }) => {
   const { fileName } = useParams();
@@ -10,34 +11,28 @@ const FileDetail = ({ files }) => {
   }
 
   return (
-    <div>
+    <div className="FileDetail">
       <h2>{file.fileName}</h2>
-      <p style={{ fontStyle: "italic", color: "#555" }}>{file.description}</p>
-      <pre
-        style={{
-          backgroundColor: "#f4f4f4",
-          padding: "16px",
-          borderRadius: "8px",
-        }}
-      >
+      <p>{file.description}</p>
+      <pre>
         {file.code.map((line, index) => (
           <div
             key={index}
             style={{
-              backgroundColor: line.highlight ? "#ffe4b2" : "transparent",
+              backgroundColor: line.highlight ? "#ffe4b2" : "transparent", // 하이라이트 배경색
               padding: "2px 0",
             }}
           >
             {line.link ? (
-              <Link
-                to={line.link}
+              <a
+                href={line.link}
                 style={{
-                  color: "blue",
+                  color: line.highlight ? "darkred" : "blue",
                   textDecoration: "underline",
                 }}
               >
                 {line.text}
-              </Link>
+              </a>
             ) : (
               line.text
             )}
