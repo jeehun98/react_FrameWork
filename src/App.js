@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import FileViewer from "./FileViewer";
-import FileDetail from "./FileDetail";
-import DocsPage from "./DocsPage"; // 새 문서 페이지
+import FileViewer from "./components/FileViewer/FileViewer";
+import FileDetail from "./components/FileViewer/FileDetail";
+import DocsPage from "./pages/DocsPage"; // 새 문서 페이지
 import files from "./data";
-import MarkdownViewer from "./MarkdownViewer";
+import MarkdownFilesViewer from "./components/MarkdownFilesViewer/MarkdownFilesViewer";
 import "./styles/App.css"; // 스타일 추가
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <h1>React Markdown Viewer</h1>
       {/* example.md 파일을 표시 */}
-      <MarkdownViewer fileName="example" />
+      <MarkdownFilesViewer fileName="example" />
 
       <Router>
         <header>

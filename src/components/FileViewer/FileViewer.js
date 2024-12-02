@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles/FileViewer.css";
+import '../../styles/FileViewer.css';
 
 const FileViewer = ({ files }) => {
   return (

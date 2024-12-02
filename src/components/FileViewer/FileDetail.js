@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import "./styles/FileDetail.css";
+import '../../styles/FileDetail.css';
 
 const FileDetail = ({ files }) => {
   const { fileName } = useParams();
