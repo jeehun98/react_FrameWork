@@ -1,0 +1,22 @@
+.markdown-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .markdown-content h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+  
+  .markdown-content pre {
+    background-color: #272c34;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+  }
+  

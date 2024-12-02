@@ -1,29 +1,38 @@
-/* styles/App.css */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  .App {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-  }
-  
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.content-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.navigator {
+  width: 250px; /* 네비게이터의 너비 고정 */
+  background-color: #f4f4f4;
+  border-right: 1px solid #ddd;
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+.main-content {
+  flex: 1; /* 남은 공간 차지 */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+}

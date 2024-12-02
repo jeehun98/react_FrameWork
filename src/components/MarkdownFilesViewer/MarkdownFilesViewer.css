@@ -1,69 +1,26 @@
-.markdown-viewer {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  color: #333;
+.markdown-navigator {
+  padding: 10px;
 }
 
-.title {
-  text-align: center;
-  color: #007bff;
-}
-
-.error {
-  color: red;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.file-list {
-  margin-bottom: 20px;
-}
-
-.file-list h2 {
+.markdown-navigator h2 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.file-list ul {
+.markdown-navigator ul {
   list-style: none;
   padding: 0;
 }
 
-.file-list li {
-  margin-bottom: 10px;
+.markdown-navigator li {
+  margin-bottom: 8px;
 }
 
-.file-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
+.markdown-navigator a {
+  text-decoration: none;
+  color: #007bff;
 }
 
-.file-button:hover {
-  background-color: #0056b3;
-}
-
-.markdown-content {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.markdown-content h2 {
-  margin-bottom: 15px;
-}
-
-.markdown-content pre {
-  background: #272c34;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
+.markdown-navigator a:hover {
+  text-decoration: underline;
 }
