@@ -1,10 +1,13 @@
 .markdown-navigator {
-  padding: 10px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 .markdown-navigator h2 {
-  font-size: 18px;
-  margin-bottom: 10px;
+  color: #2c3e50;
+  margin-bottom: 12px;
 }
 
 .markdown-navigator ul {
@@ -13,14 +16,36 @@
 }
 
 .markdown-navigator li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .markdown-navigator a {
+  color: #3498db;
   text-decoration: none;
-  color: #007bff;
+  font-weight: bold;
 }
 
 .markdown-navigator a:hover {
   text-decoration: underline;
+}
+
+.markdown-container {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+.markdown-container h1,
+.markdown-container h2,
+.markdown-container h3 {
+  color: #2c3e50;
+  margin-bottom: 16px;
+}
+
+.markdown-container p {
+  margin-bottom: 12px;
+  color: #4a4a4a;
 }
