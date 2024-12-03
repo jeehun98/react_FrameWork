@@ -11,21 +11,16 @@ const App = () => {
         <header>
           <h1>React Markdown Viewer</h1>
         </header>
-
         <div className="content-container">
-          {/* 네비게이터 */}
           <nav className="navigator">
             <MarkdownFilesViewer />
           </nav>
-
-          {/* 본문 내용 */}
           <main className="main-content">
             <Routes>
               <Route path="/file/:fileName" element={<MarkdownContent />} />
             </Routes>
           </main>
         </div>
-
         <footer>
           <p>&copy; 2024 Code Files Viewer. All rights reserved.</p>
         </footer>

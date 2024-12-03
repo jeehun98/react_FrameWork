@@ -3,27 +3,50 @@ import { Link } from "react-router-dom";
 import "./MarkdownFilesViewer.css";
 
 const MarkdownFilesViewer = () => {
-  const [files, setFiles] = useState([]);
+  const [structure, setStructure] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/markdown-files")
-      .then((response) => response.json())
-      .then((data) => setFiles(data))
-      .catch((error) => console.error("Error fetching file list:", error));
+    fetch("http://localhost:5000/api/markdown-structure")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Error fetching structure: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then((data) => setStructure(data))
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
   }, []);
 
-  return (
-    <div className="markdown-navigator">
-      <h2>Available Files</h2>
-      <ul>
-        {files.map((file) => (
-          <li key={file}>
-            <Link to={`/file/${file}`}>{file}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+  const renderStructure = (nodes) => (
+    <ul>
+      {nodes.map((node, index) => (
+        <li key={`${node.name}-${index}`}>
+          {node.type === "file" ? (
+            <Link to={`/file/${encodeURIComponent(node.name)}`}>{node.name}</Link>
+          ) : (
+            <details>
+              <summary>{node.name}</summary>
+              {node.children && renderStructure(node.children)}
+            </details>
+          )}
+        </li>
+      ))}
+    </ul>
   );
+
+  if (error) {
+    return <div className="markdown-files">Error: {error}</div>;
+  }
+
+  if (!structure || structure.length === 0) {
+    return <div className="markdown-files">Loading...</div>;
+  }
+
+  return <div className="markdown-files">{renderStructure(structure)}</div>;
 };
 
 export default MarkdownFilesViewer;

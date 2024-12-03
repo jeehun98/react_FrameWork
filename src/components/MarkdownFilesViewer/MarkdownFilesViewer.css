@@ -1,51 +1,22 @@
-.markdown-navigator {
-  padding: 20px;
-  background-color: #f4f4f4;
-  border-radius: 8px;
-  margin-bottom: 20px;
+.markdown-files ul {
+  list-style-type: none;
+  padding-left: 20px;
 }
 
-.markdown-navigator h2 {
-  color: #2c3e50;
-  margin-bottom: 12px;
+.markdown-files li {
+  margin-bottom: 8px;
 }
 
-.markdown-navigator ul {
-  list-style: none;
-  padding: 0;
-}
-
-.markdown-navigator li {
-  margin-bottom: 10px;
-}
-
-.markdown-navigator a {
+.markdown-files a {
   color: #3498db;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.markdown-navigator a:hover {
+.markdown-files a:hover {
   text-decoration: underline;
 }
 
-.markdown-container {
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-}
-
-.markdown-container h1,
-.markdown-container h2,
-.markdown-container h3 {
-  color: #2c3e50;
-  margin-bottom: 16px;
-}
-
-.markdown-container p {
-  margin-bottom: 12px;
-  color: #4a4a4a;
+.markdown-files summary {
+  font-weight: bold;
+  cursor: pointer;
 }

@@ -1,22 +1,34 @@
 .markdown-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-  }
-  
-  .markdown-content h2 {
-    margin-bottom: 15px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-  }
-  
-  .markdown-content pre {
-    background-color: #272c34;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-  }
-  
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.markdown-content p {
+  margin-bottom: 16px;
+  color: #4a4a4a;
+}
+
+.markdown-content pre {
+  background-color: #2d2d2d;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.markdown-content code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
